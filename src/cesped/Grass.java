@@ -1,21 +1,37 @@
 package cesped;
 
 public class Grass {
-	private int longtud;
+	private boolean humedad;
 	private boolean largo;
-	
-	public void crecer(int pCarga) {
-		cantidadAtaques+=pCarga;
-	}
-	
-	public void secarse() {
-		if (cantidadAtaques>0 && !locked) {
-			System.out.println("Weapon "+name+" shooting");
-			cantidadAtaques--;
-		}
-		else {
-			System.out.println("Weapon "+name+" NO HAY CARGA O ESTA CON SEGURO");
+
+	public void crecer(boolean pLargo) {
+		largo = pLargo;
+		if (largo == true) {
+			System.out.println("El cesped ha crecido mucho");
+
+		} else {
+			System.out.println("El cesped ha sido podado");
+			largo = false;
 		}
 	}
-	
+
+	public void humedecer(boolean pHumedad) {
+		humedad = pHumedad;
+		if (humedad == false) {
+			System.out.println("El cesped está seco");
+
+		} else {
+			System.out.println("El cescped ha sido regado");
+			humedad = true;
+		}
+	}
+
+	public boolean getHumedad() {
+		return humedad;
+	}
+
+	public boolean getLargo() {
+		return largo;
+	}
+
 }

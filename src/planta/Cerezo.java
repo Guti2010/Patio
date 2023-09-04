@@ -1,5 +1,7 @@
 package planta;
 
-public class Cerezo {
-
+public class Cerezo extends Plant {
+	public Cerezo() {
+		super("cereza", "Cerezo", "moradas", false, "arbol");
+	}
 }

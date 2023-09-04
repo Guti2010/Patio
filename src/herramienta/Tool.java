@@ -1,34 +1,65 @@
 package herramienta;
 
 public class Tool {
+	private String funcion;
+	private String name;
 	private boolean activado;
-	private String objetivo;
-	private int tiempoFuncionamiento;
-	private String accion;
-	
-	
-	public Herramienta(String pFruto, String pFlor, String pcolor, boolean pConPlagas,String pTipo ) {
-		locked = true;
-		name = pName;
-		cantidadAtaques = pAtaques;
-		alcance = pAlcance;
-		capacidadDestructiva = pCapacidad;
-		
-		System.out.println("Se inicializa el arma "+this.name+" bloqueda");
+	private boolean electricidad;
+	private boolean agua;
+
+	public Tool(String pNmae, String pFuncion) {
+		funcion = pFuncion;
+		name = pNmae;
+
+		System.out.println("En el patio de la casa hay " + name + "es para " + funcion);
 	}
-	
-	public void Florecer(int pCarga) {
-		cantidadAtaques+=pCarga;
+
+	public void ActivarDesactivarElectricidad(boolean pElectricidad) {
+		electricidad = pElectricidad;
 	}
-	
-	public void DarFruto() {
-		if (cantidadAtaques>0 && !locked) {
-			System.out.println("Weapon "+name+" shooting");
-			cantidadAtaques--;
+
+	public void ActivarDesactivarAgua(boolean pAgua) {
+		agua = pAgua;
+	}
+
+	public void Funcionar() {
+		if (electricidad == true && name != "Aspesor") {
+			System.out.println("En el patio de la casa se pueden usar los dispositivos");
+			activado = true;
+		} else {
+			if (electricidad == true && agua == true) {
+				System.out.println("En el patio de la casa se pueden usar los dispositivos");
+				activado = true;
+				return;
+			} else {
+				System.out.println("En el patio de la casa no se pueden usar los dispositivos");
+				activado = false;
+				return;
+			}
 		}
-		else {
-			System.out.println("Weapon "+name+" NO HAY CARGA O ESTA CON SEGURO");
+
+	}
+
+	public void dejarFuncionar() {
+		if (activado == true) {
+			System.out.println("En el patio de la casa se han desactivado los dispositivos");
+			activado = false;
+		} else {
+			System.out.println("En el patio de la casa los dispositivos no están activos");
 		}
+
+	}
+
+	public String getHerramienta() {
+		return name;
+	}
+
+	public String getFuncion() {
+		return funcion;
+	}
+
+	public boolean getActivacion() {
+		return activado;
 	}
 
 }

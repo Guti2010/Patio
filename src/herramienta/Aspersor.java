@@ -27,12 +27,13 @@ public class Aspersor extends Tool {
 
 	}
 
-	public void regarPlantas() {
+	public void regarPlantas(Plant pPlanta) {
 		boolean activado = currentTool.getActivacion();
 		boolean plantasConAgua = Plantas.getHumedad();
 		if (activado == true) {
 			if (plantasConAgua == false) {
 				Plantas.humedecer(true);
+				System.out.println("Se está regando"+pPlanta);
 			} else {
 				System.out.println("Aún no es necesario regar las plantas");
 

@@ -1,6 +1,8 @@
 package planta;
-
+import java.util.ArrayList;
+import controlesPatio.Util;
 public class Plant {
+	public ArrayList<String> tasks;
 	private String fruto;
 	private String color;
 	private boolean conPlagas;
@@ -14,24 +16,24 @@ public class Plant {
 		fruto = pFruto;
 		tipo = pTipo;
 
-		System.out.println("En el patio de la casa hay " + this.name + "s sin plagas");
+		Util.report("En el patio de la casa hay " + this.name + "s sin plagas");
 	}
 
 	public void Florecer() {
 		if (tipo == "planta") {
-			System.out.println("La planta " + this.name + " tiene flores de color " + color);
+			Util.report("La planta " + this.name + " tiene flores de color " + color);
 		}
 		if (tipo == "arbol") {
-			System.out.println("El árbol " + this.name + " tiene flores de color " + color);
+			Util.report("El árbol " + this.name + " tiene flores de color " + color);
 		}
 	}
 
 	public void DarFruto() {
 		if (tipo == "planta") {
-			System.out.println("La planta " + this.name + " tiene frutos de " + fruto);
+			Util.report("La planta " + this.name + " tiene frutos de " + fruto);
 		}
 		if (tipo == "arbol") {
-			System.out.println("El árbol " + this.name + " tiene frutos de " + fruto);
+			Util.report("El árbol " + this.name + " tiene frutos de " + fruto);
 		}
 
 	}
@@ -39,19 +41,19 @@ public class Plant {
 	public void relacionConPlagas(boolean pConPlagas) {
 		conPlagas = pConPlagas;
 		if (conPlagas == true) {
-			System.out.println("La planta " + this.name + " tiene plagas");
+			Util.report("La planta " + this.name + " tiene plagas");
 		} else {
-			System.out.println("La planta " + this.name + " no tiene plagas, ha sido fumigada con exito");
+			Util.report("La planta " + this.name + " no tiene plagas, ha sido fumigada con exito");
 		}
 	}
 
 	public void humedecer(boolean pHumedad) {
 		humedad = pHumedad;
 		if (humedad == false) {
-			System.out.println("A las plantas les falta agua");
+			Util.report("A las plantas les falta agua");
 
 		} else {
-			System.out.println("Las plantas han sidor regadas");
+			Util.report("Las plantas han sidor regadas");
 			humedad = true;
 		}
 	}

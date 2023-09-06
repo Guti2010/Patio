@@ -4,8 +4,7 @@ public class Tool {
 	private String funcion;
 	private String name;
 	private boolean activado;
-	private boolean electricidad;
-	private boolean agua;
+	
 
 	public Tool(String pNmae, String pFuncion) {
 		funcion = pFuncion;
@@ -14,15 +13,7 @@ public class Tool {
 		System.out.println("En el patio de la casa hay " + name + "es para " + funcion);
 	}
 
-	public void ActivarDesactivarElectricidad(boolean pElectricidad) {
-		electricidad = pElectricidad;
-	}
-
-	public void ActivarDesactivarAgua(boolean pAgua) {
-		agua = pAgua;
-	}
-
-	public void Funcionar() {
+	public void Funcionar(boolean electricidad, boolean agua) {
 		if (electricidad == true && name != "Aspesor") {
 			System.out.println("En el patio de la casa se pueden usar los dispositivos");
 			activado = true;

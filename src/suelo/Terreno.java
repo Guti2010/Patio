@@ -19,9 +19,9 @@ public class Terreno {
 		}
 	}
 
-	public void poderPlantar(boolean pInundado) {
+	public void inundar(boolean pInundado) {
 		aptoParaPlantar = pInundado;
-		if (aptoParaPlantar == true) {
+		if (aptoParaPlantar == false) {
 			System.out.println("Se puede plantar en el terreno, no está inundado");
 		} else {
 			System.out.println("El terreno está inundado, no se puede plantar");

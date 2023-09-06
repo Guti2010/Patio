@@ -1,0 +1,67 @@
+{
+	"tareas" : [
+		{
+			"task": "dar frutos",
+			"time": "07:00",
+			"elemento": "Plantas"
+		},
+		{
+			"task": "regar plantas",
+			"time": "09:20",
+			"elemento": "Cerezo"
+		},
+		{
+			"task": "regar plantas",
+			"time": "09:25",
+			"elemento": "Rosa"
+		},
+		{
+			"task": "enviar plagas",
+			"time": "09:30",
+			"elemento": "Manzano"
+		},
+		{
+			"task": "enviar plagas",
+			"time": "10:30",
+			"elemento": "Naranjo"
+		},
+		{
+			"task": "enviar plagas",
+			"time": "10:35",
+			"elemento": "Girasol"
+		},
+		{
+			"task": "enviar plagas",
+			"time": "10:40",
+			"elemento": "Tulipan"
+		},
+		{
+			"task": "fumigar plantas",
+			"time": "12:00",
+			"elemento": "Plantas"
+		},		
+		{
+			"task": "inundar suelo",
+			"time": "14:20",
+			"elemento": "suelo"
+		},
+		{
+			"task": "filtrar agua",
+			"time": "15:40",
+			"elemento": "suelo"
+		}	
+		,
+		{
+			"task": "crecer cesped",
+			"time": "16:50",
+			"elemento": "cesped"
+		}
+		,
+		{
+			"task": "podar cesped",
+			"time": "18:40",
+			"elemento": "cesped"
+		}
+
+	]
+}

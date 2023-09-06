@@ -1,5 +1,6 @@
 package controlesPatio;
 
 public enum Action {
-	hacerSequia, crecerCesped, activarPlagas, regarplantas, fumigarplantas, cortarcesped
+	ActivarElectricidad ,DesactivarElectricidad, ActivarAgua, DesactivarAgua, crearPlantas, crecercesped, inundarSuelo,
+	filtrarSuelo, enviarPlagas, cortarCesped, regarPatio, fumigar
 }

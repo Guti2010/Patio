@@ -3,8 +3,8 @@ package timer;
 import java.util.Calendar; 
 import java.util.Date;
 
+import controlesPatio.Scheduler;
 import interfaz.GUI;
-import planner.Scheduler;
 
 public class Clock extends Thread {
 	private static boolean running = true;

@@ -47,7 +47,7 @@ public class Patio {
 	public void inundarSuelo() {
 		suelo.inundar(true);
 	}
-	public void filtrarrSuelo() {
+	public void filtrarSuelo() {
 		suelo.inundar(false);
 		suelo.filtrarAgua();
 		suelo.fertilizar(true);

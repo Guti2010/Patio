@@ -3,7 +3,6 @@ import javax.swing.*;
 
 import gui.RodriWindow;
 import planner.ScheduleParser;
-import planner.Task;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,6 +10,8 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+
+import controlesPatio.Task;
 
 public class GUI extends JFrame {
 	private JTextArea textArea;
